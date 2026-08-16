@@ -1,0 +1,4 @@
+# 一个 insert 补丁：加一行插件（该行同时触发 dsh.client 扫描）
+- insert:
+    - id: layout
+      name: dsh-layout

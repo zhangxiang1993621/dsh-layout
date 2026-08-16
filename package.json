@@ -1,0 +1,35 @@
+{
+  "name": "dsh-layout",
+  "version": "0.1.0",
+  "description": "布局管理器：布局预设 + 左右区域插件分配 + 折叠，中间对话区不变",
+  "private": true,
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "slots",
+        "layout",
+        "sessions",
+        "workspaces"
+      ]
+    }
+  },
+  "license": "MIT"
+}
